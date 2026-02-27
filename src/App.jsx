@@ -8,7 +8,7 @@ const CustomCursor = () => {
 
     const cursor = document.getElementById('custom-cursor');
     const follower = document.getElementById('custom-cursor-follower');
-    
+
     const onMouseMove = (e) => {
       if (cursor) cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
       if (follower) follower.style.transform = `translate3d(${e.clientX - 14}px, ${e.clientY - 14}px, 0)`;
@@ -18,7 +18,7 @@ const CustomCursor = () => {
     const handleLeave = () => follower?.classList.remove('cursor-hover');
 
     window.addEventListener('mousemove', onMouseMove);
-    
+
     const interactiveElements = document.querySelectorAll('a, button, .hover-trigger');
     interactiveElements.forEach(el => {
       el.addEventListener('mouseenter', handleHover);
@@ -83,12 +83,12 @@ const useScrollReveal = () => {
 const TopBar = () => (
   <div className="bg-slate-950 text-white text-[10px] md:text-xs py-2 px-4 flex justify-between items-center hidden md:flex font-sans tracking-widest uppercase">
     <div className="flex items-center space-x-6">
-      <span className="flex items-center"><MapPin size={12} className="mr-2 text-[#C5A880]"/> 222 NE 25th St Unit 101, Miami, FL 33137</span>
-      <span className="flex items-center"><Phone size={12} className="mr-2 text-[#C5A880]"/> 305-571-7279</span>
+      <span className="flex items-center"><MapPin size={12} className="mr-2 text-[#C5A880]" /> 222 NE 25th St Unit 101, Miami, FL 33137</span>
+      <span className="flex items-center"><Phone size={12} className="mr-2 text-[#C5A880]" /> 305-571-7279</span>
     </div>
     <div className="flex items-center space-x-6">
       <a href="https://booking.mangomint.com/elitestyles" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A880] transition-colors hover-trigger">Client Portal</a>
-      <a href="https://www.instagram.com/elite.medspa/" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A880] transition-colors flex items-center hover-trigger"><Instagram size={12} className="mr-2"/> Follow Us</a>
+      <a href="https://www.instagram.com/elite.medspa/" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A880] transition-colors flex items-center hover-trigger"><Instagram size={12} className="mr-2" /> Follow Us</a>
     </div>
   </div>
 );
@@ -100,7 +100,7 @@ const Navbar = ({ scrolled }) => {
     <nav className={`fixed w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="flex-shrink-0 flex items-center cursor-pointer hover-trigger" onClick={() => window.scrollTo(0,0)}>
+          <div className="flex-shrink-0 flex items-center cursor-pointer hover-trigger" onClick={() => window.scrollTo(0, 0)}>
             <h1 className={`font-serif text-2xl md:text-3xl tracking-wider ${scrolled ? 'text-slate-900' : 'text-white'}`}>
               ELITE<span className="font-light italic ml-1">Styles</span>
               <span className="block text-[9px] md:text-[10px] tracking-[0.35em] uppercase font-sans mt-1 text-[#C5A880]">Salon & Med Spa</span>
@@ -113,13 +113,13 @@ const Navbar = ({ scrolled }) => {
                 {item}
               </a>
             ))}
-            <a 
-              href="https://booking.mangomint.com/elitestyles" 
-              target="_blank" 
+            <a
+              href="https://booking.mangomint.com/elitestyles"
+              target="_blank"
               rel="noopener noreferrer"
               className={`px-6 py-3 text-xs tracking-widest uppercase transition-all duration-300 border flex items-center hover-trigger
-                ${scrolled 
-                  ? 'bg-slate-900 text-white border-slate-900 hover:bg-[#C5A880] hover:border-[#C5A880]' 
+                ${scrolled
+                  ? 'bg-slate-900 text-white border-slate-900 hover:bg-[#C5A880] hover:border-[#C5A880]'
                   : 'bg-white/10 text-white border-white/30 backdrop-blur-sm hover:bg-white hover:text-slate-900'}`}
             >
               Book Now
@@ -142,9 +142,9 @@ const Navbar = ({ scrolled }) => {
             </a>
           ))}
           <div className="pt-6 pb-2">
-             <a href="https://booking.mangomint.com/elitestyles" target="_blank" rel="noopener noreferrer" className="w-full block text-center bg-slate-900 text-white px-6 py-4 uppercase tracking-widest text-sm hover:bg-[#C5A880] transition-colors">
+            <a href="https://booking.mangomint.com/elitestyles" target="_blank" rel="noopener noreferrer" className="w-full block text-center bg-slate-900 text-white px-6 py-4 uppercase tracking-widest text-sm hover:bg-[#C5A880] transition-colors">
               Book Appointment
-             </a>
+            </a>
           </div>
         </div>
       </div>
@@ -156,9 +156,9 @@ const Hero = () => {
   return (
     <div className="relative h-screen min-h-[700px] flex flex-col justify-end pb-24 md:pb-32 overflow-hidden bg-slate-950">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <img 
-          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2940&auto=format&fit=crop" 
-          alt="Luxury Aesthetic Patient" 
+        <img
+          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2940&auto=format&fit=crop"
+          alt="Luxury Aesthetic Patient"
           className="w-full h-full object-cover object-top opacity-50 animate-[imageScale_4s_cubic-bezier(0.16,1,0.3,1)_forwards]"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
@@ -190,12 +190,12 @@ const Hero = () => {
             <p className="text-white/70 text-base md:text-lg font-light mb-10 max-w-xl leading-relaxed">
               Providing hyperpigmentation solutions, anti-aging results, and luxury salon services at the intersection of lifestyle and medical science in Edgewater, Miami.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <a 
-                href="https://booking.mangomint.com/elitestyles" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://booking.mangomint.com/elitestyles"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group relative px-8 py-4 bg-white overflow-hidden w-full sm:w-auto text-center hover-trigger"
               >
                 <div className="absolute inset-0 bg-[#C5A880] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 cubic-bezier(0.16,1,0.3,1)"></div>
@@ -203,9 +203,9 @@ const Hero = () => {
                   Book Appointment
                 </span>
               </a>
-              
+
               <a href="#treatments" className="group flex items-center text-white text-xs tracking-[0.2em] uppercase font-medium hover:text-[#C5A880] transition-colors duration-500 hover-trigger">
-                Explore Services 
+                Explore Services
                 <span className="ml-3 w-8 h-[1px] bg-white group-hover:bg-[#C5A880] group-hover:w-12 transition-all duration-500"></span>
               </a>
             </div>
@@ -228,12 +228,12 @@ const AboutSection = () => {
 
           <div ref={textRef} className="lg:col-span-7 flex flex-col justify-center reveal-item">
             <div className="flex items-center space-x-6 mb-10">
-               <div className="w-16 h-[1px] bg-[#C5A880]"></div>
-               <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase font-bold">The Elite Experience</span>
+              <div className="w-16 h-[1px] bg-[#C5A880]"></div>
+              <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase font-bold">The Elite Experience</span>
             </div>
 
             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-slate-900 mb-12 leading-[1.1]">
-              Where Clinical Science <br className="hidden md:block"/> 
+              Where Clinical Science <br className="hidden md:block" />
               <span className="italic text-slate-400">Meets Luxury Artistry.</span>
             </h2>
 
@@ -246,10 +246,10 @@ const AboutSection = () => {
               </p>
 
               <div className="pt-8">
-                <a 
-                  href="https://booking.mangomint.com/elitestyles" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://booking.mangomint.com/elitestyles"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group inline-flex items-center text-slate-900 uppercase tracking-[0.2em] text-xs font-bold hover-trigger"
                 >
                   <span className="border-b border-slate-900 pb-2 group-hover:text-[#C5A880] group-hover:border-[#C5A880] transition-colors">Book a Consultation</span>
@@ -260,23 +260,23 @@ const AboutSection = () => {
           </div>
 
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
-             <div ref={imageRef} className="relative w-full aspect-[3/4] overflow-hidden rounded-sm group reveal-item" style={{ transitionDelay: '200ms' }}>
-                <img 
-                  src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2940&auto=format&fit=crop" 
-                  className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2s] ease-out" 
-                  alt="Elite Styles Med Spa Interior" 
-                />
-                <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-700"></div>
-             </div>
-             
-             <div ref={badgeRef} className="absolute -bottom-12 -left-8 md:-left-16 w-48 md:w-56 aspect-square bg-white p-3 shadow-2xl z-10 reveal-item" style={{ transitionDelay: '400ms' }}>
-                <div className="w-full h-full border border-[#C5A880]/30 flex flex-col items-center justify-center p-6 text-center bg-[#FAF9F6]">
-                   <span className="font-serif text-3xl md:text-4xl text-slate-900 block mb-2 italic">Est.</span>
-                   <span className="text-[#C5A880] text-base md:text-lg tracking-[0.3em] font-bold">2016</span>
-                   <span className="w-12 h-[1px] bg-slate-300 my-4"></span>
-                   <span className="text-slate-500 text-[9px] md:text-[10px] tracking-widest uppercase font-bold">Edgewater, FL</span>
-                </div>
-             </div>
+            <div ref={imageRef} className="relative w-full aspect-[3/4] overflow-hidden rounded-sm group reveal-item" style={{ transitionDelay: '200ms' }}>
+              <img
+                src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=2940&auto=format&fit=crop"
+                className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2s] ease-out"
+                alt="Elite Styles Med Spa Interior"
+              />
+              <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors duration-700"></div>
+            </div>
+
+            <div ref={badgeRef} className="absolute -bottom-12 -left-8 md:-left-16 w-48 md:w-56 aspect-square bg-white p-3 shadow-2xl z-10 reveal-item" style={{ transitionDelay: '400ms' }}>
+              <div className="w-full h-full border border-[#C5A880]/30 flex flex-col items-center justify-center p-6 text-center bg-[#FAF9F6]">
+                <span className="font-serif text-3xl md:text-4xl text-slate-900 block mb-2 italic">Est.</span>
+                <span className="text-[#C5A880] text-base md:text-lg tracking-[0.3em] font-bold">2016</span>
+                <span className="w-12 h-[1px] bg-slate-300 my-4"></span>
+                <span className="text-slate-500 text-[9px] md:text-[10px] tracking-widest uppercase font-bold">Edgewater, FL</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -294,11 +294,11 @@ const ClinicalExpertise = () => {
     <section className="py-24 md:py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           <div ref={imageRef} className="relative aspect-square md:aspect-[4/3] overflow-hidden rounded-sm reveal-item">
-            <img 
-              src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2940&auto=format&fit=crop" 
-              className="w-full h-full object-cover" 
+            <img
+              src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2940&auto=format&fit=crop"
+              className="w-full h-full object-cover"
               alt="Clear, radiant skin"
             />
             <div className="absolute inset-0 bg-[#C5A880]/10 mix-blend-multiply"></div>
@@ -306,15 +306,15 @@ const ClinicalExpertise = () => {
 
           <div ref={textRef} className="flex flex-col justify-center reveal-item lg:pl-10">
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight">
-              Miami's Premier <br/> <span className="italic text-[#C5A880]">Melasma Specialists</span>
+              Miami's Premier <br /> <span className="italic text-[#C5A880]">Melasma Specialists</span>
             </h3>
             <p className="text-slate-600 font-light text-base md:text-lg leading-relaxed mb-6">
-              Hyperpigmentation and melasma require more than just surface-level treatments. They demand a profound clinical understanding of the skin's biology. 
+              Hyperpigmentation and melasma require more than just surface-level treatments. They demand a profound clinical understanding of the skin's biology.
             </p>
             <p className="text-slate-600 font-light text-base md:text-lg leading-relaxed mb-10">
               Understanding the causes of melasma is our first step in managing and treating it effectively. From specialized medical-grade Chemical Peels to advanced collagen induction therapy via SkinPen® Microneedling, we craft targeted interventions that clear your complexion and prevent future flare-ups.
             </p>
-            
+
             <ul className="space-y-4 mb-10 border-t border-slate-100 pt-8">
               {['Comprehensive Pigment Analysis', 'Customized Chemical Peels', 'SkinPen® Microneedling Integration', 'Long-term Maintenance Regimens'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm font-bold tracking-widest uppercase text-slate-800">
@@ -346,7 +346,7 @@ const HorizontalGallery = () => {
       const viewportHeight = window.innerHeight;
       const scrollableDistance = rect.height - viewportHeight;
       const currentScroll = -rect.top;
-      
+
       let p = currentScroll / scrollableDistance;
       p = Math.max(0, Math.min(1, p));
       setProgress(p);
@@ -370,7 +370,7 @@ const HorizontalGallery = () => {
       subtitle: "02 / FACE IT",
       title: "Advanced Skin Treatments",
       desc: "Specializing in Melasma and hyperpigmentation. Featuring SkinPen® Microneedling, medical-grade Chemical Peels, and HydraFacials.",
-      img: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?q=80&w=2940&auto=format&fit=crop"
+      img: "https://images.unsplash.com/photo-1570174006382-148305ce4972?q=80&w=2940&auto=format&fit=crop"
     },
     {
       subtitle: "03 / BEAUTIFY IT",
@@ -389,14 +389,14 @@ const HorizontalGallery = () => {
   return (
     <section id="treatments" ref={containerRef} className="h-[500vh] relative bg-white border-y border-slate-100">
       <div className="sticky top-0 h-screen overflow-hidden flex items-center pt-20 md:pt-28">
-        <div 
+        <div
           className="flex h-full w-[500vw] will-change-transform ease-out transition-transform duration-75"
           style={{ transform: `translate3d(${translateX}, 0, 0)` }}
         >
           <div className="w-[100vw] h-full flex items-center justify-center p-8 md:p-20 border-r border-slate-200 bg-[#FAF9F6]">
             <div className="max-w-3xl text-center">
               <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase mb-6 block font-medium">Curated Offerings</span>
-              <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-slate-900 mb-8 leading-[1.1]">The Art of <br/><span className="italic">Refinement.</span></h2>
+              <h2 className="font-serif text-5xl md:text-7xl lg:text-8xl text-slate-900 mb-8 leading-[1.1]">The Art of <br /><span className="italic">Refinement.</span></h2>
               <p className="text-slate-600 font-light text-lg mb-10">Scroll to explore our signature treatments.</p>
               <div className="w-[1px] h-24 bg-slate-300 mx-auto animate-[scrollLine_2.5s_cubic-bezier(0.8,0,0.2,1)_infinite] origin-top"></div>
             </div>
@@ -429,28 +429,28 @@ const HorizontalGallery = () => {
 // --- TEAM SECTION ---
 const TeamSection = () => {
   const headerRef = useScrollReveal();
-  
+
   const team = [
-    { 
-      name: "Beto Pellegrino & Franco Hernandez", 
+    {
+      name: "Beto Pellegrino & Franco Hernandez",
       role: "Founders & Master Stylists",
       bio: "Establishing Elite Styles in 2016, our founders blend visionary hair artistry with luxury service. Beto is celebrated by clients as Florida's premier colorist.",
       specialties: ["Balayage", "Master Color", "Luxury Hair Care"]
     },
-    { 
-      name: "Angela M. Rivera", 
+    {
+      name: "Angela M. Rivera",
       role: "APRN, FNP-C / Lead Injector",
       bio: "With over 7 years of experience in facial and body aesthetics, Angela crafts highly personalized injectable treatment plans to meet your exact cosmetic goals.",
       specialties: ["Neuromodulators", "Dermal Fillers", "Liquid BBL"]
     },
-    { 
-      name: "Vivian Mokwa", 
+    {
+      name: "Vivian Mokwa",
       role: "LME / Medical Esthetician",
       bio: "A highly sought-after esthetician specializing in total skin rejuvenation. Vivian delivers glowing, flawless results tailored to your unique complexion.",
       specialties: ["SkinPen® Microneedling", "HydraFacials", "Lash Lifts"]
     },
-    { 
-      name: "Jennifer Cody", 
+    {
+      name: "Jennifer Cody",
       role: "FNP-BC / Aesthetic Injector",
       bio: "Dedicated to enhancing natural beauty, Jennifer specializes in precision facial balancing, lip enhancements, and restorative volume treatments.",
       specialties: ["Lip Filler", "Facial Contouring", "Anti-Aging"]
@@ -469,16 +469,16 @@ const TeamSection = () => {
           <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase mb-4 block font-medium">The Experts</span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-slate-900">Clinical & Styling Directors</h2>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {team.map((member, i) => {
             const cardRef = useScrollReveal();
             return (
               <div key={i} ref={cardRef} className="reveal-item h-full" style={{ transitionDelay: `${i * 150}ms` }}>
                 <div className="relative h-full p-8 md:p-10 flex flex-col justify-between overflow-hidden rounded-sm group hover-trigger bg-[#1E3A8A] border border-transparent hover:border-[#C5A880]/50 transition-all duration-500 ease-out shadow-lg hover:shadow-2xl hover:-translate-y-2 cursor-pointer">
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="w-8 h-[1px] bg-[#C5A880] mb-8 transition-all duration-500 group-hover:w-16"></div>
                     <h3 className="font-serif text-2xl md:text-3xl text-white mb-3 leading-tight">{member.name}</h3>
@@ -513,7 +513,7 @@ const TeamSection = () => {
 // --- NEW SECTION: Memberships ---
 const MembershipSection = () => {
   const ref = useScrollReveal();
-  
+
   return (
     <section id="membership" className="py-32 bg-slate-950 relative overflow-hidden text-white">
       {/* Decorative background lines */}
@@ -529,11 +529,11 @@ const MembershipSection = () => {
           <p className="font-light text-white/70 text-lg max-w-2xl mx-auto mb-12">
             Elevate your self-care routine. Join the Elite Styles Membership service to unlock exclusive discounts, priority booking, and curated monthly treatments designed to maintain your perfect look year-round.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-left">
             {['Exclusive Pricing on Injectables', 'Monthly VIP Salon Perks', 'Priority Event Invitations'].map((perk, i) => (
               <div key={i} className="border border-white/10 p-8 rounded-sm hover:border-[#C5A880]/40 transition-colors bg-white/5">
-                <span className="text-[#C5A880] font-serif text-2xl block mb-4">0{i+1}</span>
+                <span className="text-[#C5A880] font-serif text-2xl block mb-4">0{i + 1}</span>
                 <p className="font-sans text-sm tracking-widest uppercase font-bold">{perk}</p>
               </div>
             ))}
@@ -551,7 +551,7 @@ const MembershipSection = () => {
 // --- NEW SECTION: Editorial & Insights (Blog) ---
 const JournalSection = () => {
   const headerRef = useScrollReveal();
-  
+
   const articles = [
     {
       category: "Injectables",
@@ -598,7 +598,7 @@ const JournalSection = () => {
                   </div>
                 </div>
                 <div className="flex justify-between items-start mb-2">
-                   <p className="text-[#C5A880] text-[10px] uppercase tracking-widest font-bold">{article.date}</p>
+                  <p className="text-[#C5A880] text-[10px] uppercase tracking-widest font-bold">{article.date}</p>
                 </div>
                 <h3 className="font-serif text-2xl text-slate-900 leading-snug group-hover:text-[#C5A880] transition-colors">{article.title}</h3>
               </a>
@@ -621,18 +621,18 @@ const Testimonials = () => {
   return (
     <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#C5A880]/5 blur-[150px] rounded-full pointer-events-none"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div ref={ref} className="text-center reveal-item">
           <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase mb-4 block font-medium">Patient Stories</span>
           <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-20">Real Elite Results</h2>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reviews.map((r, i) => (
               <div key={i} className="bg-white/5 p-10 border border-white/10 hover:border-[#C5A880]/50 hover:bg-white/10 transition-all duration-500 text-left flex flex-col justify-between group">
                 <div>
                   <div className="flex text-[#C5A880] mb-6">
-                    {[1,2,3,4,5].map(s => <Star key={s} size={14} fill="currentColor" className="mr-1" />)}
+                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" className="mr-1" />)}
                   </div>
                   <p className="text-white/80 font-light italic mb-8 leading-relaxed text-sm lg:text-base">"{r.text}"</p>
                 </div>
@@ -655,17 +655,17 @@ const Location = () => {
     <section id="contact" className="py-32 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row shadow-2xl overflow-hidden rounded-sm bg-[#FAF9F6]">
-          
+
           <div ref={ref} className="w-full lg:w-1/2 p-12 md:p-16 lg:p-24 flex flex-col justify-center reveal-item z-20">
             <span className="text-[#C5A880] text-xs tracking-[0.4em] uppercase mb-4 block font-medium">Visit Us</span>
             <h2 className="font-serif text-4xl lg:text-5xl text-slate-900 mb-12">Elite Styles Salon & Med Spa</h2>
-            
+
             <div className="space-y-10">
               <div className="flex items-start group">
                 <MapPin className="text-[#C5A880] mt-1 mr-6 flex-shrink-0 transition-transform" />
                 <div>
                   <h4 className="uppercase tracking-widest text-[10px] font-bold text-slate-400 mb-2">Edgewater District</h4>
-                  <p className="text-slate-900 font-light text-lg">222 NE 25th St, Unit 101<br/>Miami, FL, 33137</p>
+                  <p className="text-slate-900 font-light text-lg">222 NE 25th St, Unit 101<br />Miami, FL, 33137</p>
                 </div>
               </div>
               <div className="flex items-start group">
@@ -686,34 +686,34 @@ const Location = () => {
               </a>
             </div>
           </div>
-          
-          <div 
+
+          <div
             className="w-full lg:w-1/2 min-h-[500px] lg:min-h-full relative overflow-hidden group hover-trigger cursor-pointer"
             onClick={() => window.open('https://www.google.com/maps/place/222+NE+25th+St+Unit+101,+Miami,+FL+33137', '_blank')}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1533481405265-e9ce0c044abb?q=80&w=2940&auto=format&fit=crop" 
-              alt="Miami Edgewater" 
+            <img
+              src="https://images.unsplash.com/photo-1533481405265-e9ce0c044abb?q=80&w=2940&auto=format&fit=crop"
+              alt="Miami Edgewater"
               className="absolute inset-0 w-full h-full object-cover scale-125 group-hover:scale-110 transition-transform duration-[15s] ease-out opacity-90"
             />
             <div className="absolute inset-0 bg-slate-900/30 group-hover:bg-slate-900/10 transition-colors duration-1000"></div>
-            
+
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="relative">
-                    <div className="absolute -inset-6 border border-white/60 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
-                    <div className="absolute -inset-3 border border-white/80 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] delay-75"></div>
-                    <MapPin className="text-white relative z-10 drop-shadow-2xl filter" size={42} />
-                </div>
+              <div className="relative">
+                <div className="absolute -inset-6 border border-white/60 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+                <div className="absolute -inset-3 border border-white/80 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite] delay-75"></div>
+                <MapPin className="text-white relative z-10 drop-shadow-2xl filter" size={42} />
+              </div>
             </div>
 
             <div className="absolute bottom-8 left-8 right-8 bg-white/80 backdrop-blur-md p-6 shadow-2xl transform translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 ease-out flex justify-between items-center border border-white/40 rounded-sm">
-                <div>
-                  <p className="font-serif text-slate-900 text-xl mb-1">Edgewater, Miami</p>
-                  <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Florida, 33137</p>
-                </div>
-                <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white transform group-hover:-rotate-45 transition-transform duration-500">
-                  <ArrowRight size={16} />
-                </div>
+              <div>
+                <p className="font-serif text-slate-900 text-xl mb-1">Edgewater, Miami</p>
+                <p className="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Florida, 33137</p>
+              </div>
+              <div className="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center text-white transform group-hover:-rotate-45 transition-transform duration-500">
+                <ArrowRight size={16} />
+              </div>
             </div>
           </div>
 
@@ -726,14 +726,14 @@ const Location = () => {
 const Footer = () => (
   <footer className="bg-slate-950 text-white/70 py-20 border-t border-white/5">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-8">
-      
+
       <div className="col-span-1 md:col-span-4">
         <h1 className="font-serif text-2xl text-white mb-6">ELITE<span className="font-light italic">Styles</span></h1>
         <p className="font-light text-sm max-w-sm mb-8 leading-relaxed">
           The premier full-service med spa and beauty salon in Miami. Specialized in melasma treatments, advanced injectables, and luxury hair care.
         </p>
         <div className="flex space-x-6">
-          <a href="https://www.instagram.com/elite.medspa" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#C5A880] transition-colors hover-trigger"><Instagram size={20}/></a>
+          <a href="https://www.instagram.com/elite.medspa" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#C5A880] transition-colors hover-trigger"><Instagram size={20} /></a>
         </div>
       </div>
 
@@ -793,7 +793,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] font-sans selection:bg-[#C5A880] selection:text-white">
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
         .font-sans { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
@@ -876,26 +877,27 @@ export default function App() {
         
         html { scroll-behavior: smooth; }
       `}} />
-      
+
       <CustomCursor />
       <ProgressBar />
       <TopBar />
       <Navbar scrolled={scrolled} />
-      
+
       <main>
         <Hero />
-        
+
         <div className="bg-[#C5A880] text-white py-5 overflow-hidden flex whitespace-nowrap border-y border-white/20 shadow-inner">
           <div className="animate-[slide_35s_linear_infinite] inline-block font-sans uppercase tracking-[0.25em] text-[11px] font-medium">
-             BOTOX & NEUROMODULATORS • DERMAL FILLERS • MELASMA SPECIALISTS • SKINPEN MICRONEEDLING • LUXURY SALON SERVICES • IV THERAPY • CHEMICAL PEELS • EYELASH ENHANCEMENT • 
-             BOTOX & NEUROMODULATORS • DERMAL FILLERS • MELASMA SPECIALISTS • SKINPEN MICRONEEDLING • LUXURY SALON SERVICES • IV THERAPY • CHEMICAL PEELS • EYELASH ENHANCEMENT •
+            BOTOX & NEUROMODULATORS • DERMAL FILLERS • MELASMA SPECIALISTS • SKINPEN MICRONEEDLING • LUXURY SALON SERVICES • IV THERAPY • CHEMICAL PEELS • EYELASH ENHANCEMENT •
+            BOTOX & NEUROMODULATORS • DERMAL FILLERS • MELASMA SPECIALISTS • SKINPEN MICRONEEDLING • LUXURY SALON SERVICES • IV THERAPY • CHEMICAL PEELS • EYELASH ENHANCEMENT •
           </div>
-          <style dangerouslySetInnerHTML={{__html:`
+          <style dangerouslySetInnerHTML={{
+            __html: `
             @keyframes slide {
               0% { transform: translateX(0); }
               100% { transform: translateX(-50%); }
             }
-          `}}/>
+          `}} />
         </div>
 
         <AboutSection />
